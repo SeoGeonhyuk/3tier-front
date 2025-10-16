@@ -1,1 +1,1 @@
-export const SERVER_URL = 'https://server.smilehahahoho';
+export const SERVER_URL = 'https://server.smilehahahoho.shop';
