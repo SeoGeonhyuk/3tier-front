@@ -13,9 +13,9 @@ phases:
     commands:
       - echo Running tests...
       - yarn test:ci
-      - echo Setting environment variable REACT_APP_SERVER from CodeBuild parameters...
-      - export REACT_APP_SERVER=$REACT_APP_SERVER
-      - echo REACT_APP_SERVER is set to $REACT_APP_SERVER
+      - echo Setting environment variable SERVER_URL from CodeBuild parameters...
+      - export REACT_APP_SERVER=$SERVER_URL
+      - echo REACT_APP_SERVER is set to $SERVER_URL
 
   build:
     commands:
