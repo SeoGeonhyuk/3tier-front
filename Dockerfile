@@ -1,5 +1,3 @@
-# React 프론트엔드 애플리케이션을 위한 Multi-stage Dockerfile
-
 # Stage 1: Build
 FROM node:16-alpine AS builder
 
