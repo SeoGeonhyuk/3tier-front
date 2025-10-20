@@ -1,1 +1,1 @@
-export const SERVER_URL = 'https://server.smilehahahoho.shop';
+export const SERVER_URL = process.env.REACT_APP_SERVER;
