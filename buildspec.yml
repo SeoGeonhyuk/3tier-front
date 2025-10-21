@@ -22,12 +22,14 @@ phases:
       - echo Build started on `date`
       - yarn build
       - echo Build completed on `date`
+      - echo Copying deployment files...
+      - cp appspec.yml build/
+      - cp -r scripts build/
 
 artifacts:
   files:
     - '**/*'
   base-directory: build
-  name: ws-$(date +%Y%m%d-%H%M%S)
 
 cache:
   paths:
