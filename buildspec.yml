@@ -22,6 +22,18 @@ phases:
       - echo Build started on `date`
       - yarn build
       - echo Build completed on `date`
+
+  post_build:
+    commands:
+      # S3에 static 폴더 업로드
+      - echo Uploading static files to S3...
+      - aws s3 sync build/static/ s3://${STATIC_BUCKET}/static/ --delete --cache-control "max-age=31536000,public,immutable"
+
+      # static 폴더 삭제 (EC2에 배포 안 함)
+      - echo Removing static folder from build...
+      - rm -rf build/static
+
+      # CodeDeploy용 파일 복사
       - echo Copying deployment files...
       - cp appspec.yml build/
       - cp -r scripts build/
