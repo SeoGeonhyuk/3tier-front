@@ -1,5 +1,5 @@
 # Stage 1: Build
-FROM node:16-alpine AS builder
+FROM node:29-alpine3.21 AS builder
 
 # 작업 디렉토리 설정
 WORKDIR /app
