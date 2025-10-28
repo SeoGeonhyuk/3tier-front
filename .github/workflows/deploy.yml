@@ -31,6 +31,8 @@ jobs:
 
       - name: Build application
         run: yarn build
+        env:
+          REACT_APP_SERVER: ${{ secrets.API_ENDPOINT }}
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
