@@ -28,6 +28,8 @@ jobs:
 
       - name: Run tests
         run: yarn test:ci
+        env:
+          REACT_APP_SERVER: ${{ secrets.API_ENDPOINT }}
 
       - name: Build application
         run: yarn build
