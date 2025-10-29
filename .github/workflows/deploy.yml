@@ -24,7 +24,13 @@ jobs:
         with:
           filters: |
             app:
-              - '!.github/**'
+              - 'src/**'
+              - 'public/**'
+              - 'package.json'
+              - 'yarn.lock'
+              - 'tsconfig.json'
+              - 'Dockerfile'
+              - '.dockerignore'
 
   deploy:
     needs: check-changes
