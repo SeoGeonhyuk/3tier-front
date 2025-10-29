@@ -24,6 +24,7 @@ jobs:
         with:
           filters: |
             app:
+              - '.github/workflows/deploy.yml'
               - 'src/**'
               - 'public/**'
               - 'package.json'
